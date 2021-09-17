@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: balagopalanspringbootkafkaredisdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: balagopalanspringbootkafkaredisdocker
+  template:
+    metadata:
+      labels:
+        app: balagopalanspringbootkafkaredisdocker 
+    spec:
+      containers:
+        - name: balagopalanspringbootkafkaredisdocker 
+          image: testbaladocker.azurecr.io/balagopalanspringbootkafkaredisdocker
+          ports:
+          - containerPort: 8080
